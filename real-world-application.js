@@ -3,65 +3,92 @@
 * You can not edit the values in the array by hand as your boss is wanting a loop that can be applied to any set of crayola boxes in the future
 */
 var crayola1990 = [
-	'Scarlet',
-	'Sunset Orange',
-	'Vivid Tangerine',
-	'Macaroni and Cheese',
-	'Mango Tango',
-	'Banana Mania',
-	'Dandelion',
-	'Canary',
-	'Inchworm',
-	'Asparagus',
-	'Granny Smith Apple',
-	'Fern',
-	'Shamrock',
-	'Mountain Meadow',
-	'Jungle Green',
-	'Caribbean Green',
-	'Tropical Rain Forest',
-	'Robins Egg Blue',
-	'Teal Blue',
-	'Outer Space',
-	'Pacific Blue',
-	'Cerulean',
-	'Denim',
-	'Wild Blue Yonder',
-	'Indigo',
-	'Manatee',
-	'Blue Bell',
-	'Purple Heart',
-	'Royal Purple',
-	'Wisteria',
-	'Vivid Violet',
-	'Purple Mountains Majesty',
-	'Fuchsia',
-	'Pink Flamingo',
-	'Jazzberry Jam',
-	'Eggplant',
-	'Cerise',
-	'Wild Strawberry',
-	'Cotton Candy',
-	'Razzmatazz',
-	'Pig Pink',
-	'Blush',
-	'Tickle Me Pink',
-	'Mauvelous',
-	'Pink Sherbert',
-	'Fuzzy Wuzzy',
-	'Beaver',
-	'Tumbleweed',
-	'Desert Sand',
-	'Almond',
-	'Shadow',
-	'Timberwolf',
-	'Antique Brass'
+    'Scarlet',
+    'Sunset Orange',
+    'Vivid Tangerine',
+    'Macaroni and Cheese',
+    'Mango Tango',
+    'Banana Mania',
+    'Dandelion',
+    'Canary',
+    'Inchworm',
+    'Asparagus',
+    'Granny Smith Apple',
+    'Fern',
+    'Shamrock',
+    'Mountain Meadow',
+    'Jungle Green',
+    'Caribbean Green',
+    'Tropical Rain Forest',
+    'Robins Egg Blue',
+    'Teal Blue',
+    'Outer Space',
+    'Pacific Blue',
+    'Cerulean',
+    'Denim',
+    'Wild Blue Yonder',
+    'Indigo',
+    'Manatee',
+    'Blue Bell',
+    'Purple Heart',
+    'Royal Purple',
+    'Wisteria',
+    'Vivid Violet',
+    'Purple Mountains Majesty',
+    'Fuchsia',
+    'Pink Flamingo',
+    'Jazzberry Jam',
+    'Eggplant',
+    'Cerise',
+    'Wild Strawberry',
+    'Cotton Candy',
+    'Razzmatazz',
+    'Pig Pink',
+    'Blush',
+    'Tickle Me Pink',
+    'Mauvelous',
+    'Pink Sherbert',
+    'Fuzzy Wuzzy',
+    'Beaver',
+    'Tumbleweed',
+    'Desert Sand',
+    'Almond',
+    'Shadow',
+    'Timberwolf',
+    'Antique Brass'
 ];
 
-//create a loop that will iterate over each item in the array and then use the String methods to modify the value at the current position in the array
+/*
 
+Thanks Ken for the help on these two solutions.  Makes a lot of sense now with split and join.
+
+*/
+
+
+//create a loop that will iterate over each item in the array and then use the String methods to modify the value at the current position in the array
+var crayola2016 = [];
+for (var i = 0; i < crayola1990.length; i++) {
+    crayola2016.push(crayola1990[i].split(" ").join("-").toLowerCase());
+}
+console.log(crayola2016);
+//console.log(crayola2016);
 /***** HINTS *******
  * remember strings are immutable but the value of a variable can be adjusted as often as needed.
  * take advantage of the methods available on stings http://www.w3schools.com/js/js_string_methods.asp
  * there are multiple ways to do something like this but you might consider using split and join
  */ 
+
+
+// for (var i = 0; i < crayola1990.length; i++) {
+//     var cray = "";
+//     var currentcray = crayola1990[i];
+//     for (var j = 0; j < currentcray.length; j++) {
+//         if (currentcray[j] == " ") {
+//             cray += "-";
+//         } else {
+//             cray += currentcray[j];
+//         }
+//     }
+//     crayola2016.push(cray.toLowerCase());
+// }
+// console.log(crayola2016);
